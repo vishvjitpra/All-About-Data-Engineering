@@ -1,0 +1,109 @@
+Fractal Analytics  rounds
+==========================
+For some There will be online MCQ round also 
+
+1) Technical Round 1
+
+2) Technical Round 2 
+
+3) Managerial Round 
+
+Sometimes 2nd and 3rd round is combined as One
+
+
+Technical Round One:-
+====================
+
+1) Tell me whole architecture of your project?
+
+2. Tell me about spark architecture?
+
+3. How spark runs in standalone mode?
+
+4. Tell me how spark divides the program in different Jobs, stages and tasks?
+
+5. How spark decides where to launch the executor in cluster?
+
+6. What are the roles and responsibility of driver in spark  yarn Architecture?
+
+7. On what basis yarn resource manager decides to allocate resources to 
+spark?
+
+8. How spark allocate memory to executors?
+
+9. What is Namenode? What is secondary namenode and what it does?
+
+10.Why spark is so much famous? In what case will you prefer hive instead of 
+spark?
+
+11. Tell me one full pipeline that you have build and tell me its Data size, cluster 
+capacity and execution time in detail?
+
+12. If I have 500 GB data then in order to process it what will be my ideal cluster 
+configuration? Explain me in detail.
+
+13.You have an employee table (Id, name, address, pin). Write sql to get top 5 
+employee name having pincode ending with 1. And then write the same in 
+pyspark using dataframe api?
+
+14.You have an employee table (empname, department, salary). Write sql to get 
+top 5 employees in each department based on salary and also write the 
+same in pyspark using dataframe api.?
+
+15.Write a program to reverse a string without using reverse function. Write your 
+own implementation?
+
+16.What is your current cluster configuration?
+
+17.What are types of tables we have in hive? Where table information gets 
+stored in hive and when we can use external table?
+
+18.What is the difference between client and cluster deployment mode?
+
+19. If your spark programs fails then can you gracefully handle it?
+
+20. If everyday you are getting some sales file in sales folder and one day by 
+mistake someone placed invoice file in sales directly then how you spark 
+application will behave? How can you handle this situation?
+
+
+21. How are you taking the existing code and working on top of that? How is your 
+current ci/cd pipeline works?
+
+22.Which IDE are you using to do your development work?
+
+23.What is difference between rank and dense rank function in sql?
+
+24.What types of join have you used?
+
+
+Technical Round 2
+==========================
+
+
+1)How are you handling data skewness?
+
+ 2. What is the role of zookeeper in hadoop cluster? 
+
+3. Do you have any experience in K8s?
+
+ 4. What automation tools have you used in your big data project? 
+
+
+5. What happens if any of the Datanode goes down? How will you handle this one in production?
+
+ 6. How spark decides which join strategy to use?
+
+ 7. If any spark application fails then what is your approach to troubleshoot that?
+
+ 8. What algorithm resource manager uses to schedule the spark jobs?
+
+ 9. How can you minimise the data shuffle in join in spark? 
+
+10.What is the maximum size of table that we can broadcast in case of broadcast join?
+
+ 11. How shuffle hash join different than sort merge join? 
+
+12. Did you work on any sql optimisation? 
+
+13. Let's say you have an array = [3,34,4,12,5,2,9]. Write a python program to find all the possible sub array's from this array whose sum is equal to 9
