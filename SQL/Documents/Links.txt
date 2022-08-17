@@ -1,0 +1,58 @@
+# YouTube
+	https://www.youtube.com/channel/UCDZ4qdpygcBCAEvP8DniwtA/playlists
+	https://www.youtube.com/watch?v=xsPdVHZmgzc&ab_channel=DataEngineeringForEveryone (joins)
+	https://www.youtube.com/watch?v=naZashy5-78&t=3s&ab_channel=GeekCoders (Built End To End Project In Azure)
+
+# SQL Practice Link
+	https://www.linkedin.com/posts/sourav-banerjee-50b443106_problems-leetcode-activity-6962294072019431424-4b38?utm_source=linkedin_share&utm_medium=member_desktop_web
+
+	Leetcode SQL Practice
+		https://lnkd.in/dyf64CzH
+
+	Leetcode SQL Study Plan
+		https://lnkd.in/dzbsF8nB
+
+	HackerRank
+		http://lnkd.in/grv_9sB
+
+	CodeAcademy
+		http://lnkd.in/gT5xmpN
+
+	SQLZOO
+		http://sqlzoo.net/
+
+	SQL Bolt
+		http://sqlbolt.com/
+
+	Danny Ma's SQL
+		https://lnkd.in/dnRj7cw4
+
+	Interactive SQL
+		http://sqlcourse.com/
+
+	Zachary Thomas' SQL Questions
+		https://lnkd.in/g-JJzuD
+
+	LearnSql.com
+		https://learnsql.com/
+
+	Specially for Windows Function
+		http://lnkd.in/g3RtPCJ
+
+# FAANG Software Engineer interviews
+	
+	System Design Template :
+		https://lnkd.in/gjyhxYqn
+
+	System Design Primer :
+		https://lnkd.in/gMZthDhA
+		https://lnkd.in/grM2aB2w
+	
+	Behavioral/Deep Dive:
+		https://lnkd.in/gJPnpQz6
+
+	Amazon Official Interview Guide :
+		https://lnkd.in/gUmTKXHY
+
+# Data Engeering Books
+	https://github.com/Sourav692/Data-Engineer-Books

@@ -1,0 +1,13 @@
+Rank (), Dense_Rank() and Row_Number functionality in SQL:
+
+✅ RANK()
+
+The RANK() is the function that ranks data in a table and skips the ties. This means it will allocate the same rank where the values are the same, but the next non-tie value will be non-sequentially ranked. It will skip the number of ranks in line with the number of ties.
+
+✅ DENSE_RANK()
+
+The DENSE_RANK() is also the Ranking Window Function. Unlike RANK(), it doesn’t skip ties. This means all the non-tied rows will be ranked sequentially, while the tied values will have the same rank.
+
+✅ ROW_NUMBER
+
+The third ranking function allocates the row number to the rows. The row number is allocated sequentially, which also includes the tied values. It’s also possible that the ROW_NUMBER doesn’t return the same row number each time. This happens when the values or the combination of values in the columns used in PARTITION BY and ORDER BY are not unique.
