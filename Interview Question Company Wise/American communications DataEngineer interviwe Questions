@@ -1,0 +1,52 @@
+American communications technology company interview questions
+
+Role: Data Engineer
+
+Round 1:
+Question 1) Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+Example 1: 
+	Input: strs = ["eat","tea","tan","ate","nat","bat"]
+	Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+Example 2: 
+	Input: strs = [""]
+	Output: [[""]]
+Example 3: 
+	Input: strs = ["a"]
+	Output: [["a"]]
+
+
+Question 2) **Context**: Say we have table `signups` in the form: 
+
+| date       | sign_ups |
+|------------|----------|
+| 2018-01-01 | 10       |
+| 2018-01-02 | 20       |
+| 2018-01-03 | 50       |
+| ...        | ...      |
+| 2018-10-01 | 35       |
+ -----------------------
+
+ Write a query to get 7-day rolling (preceding) average of daily sign-ups
+
+
+Question 3)
+**Context:** Say we have a table `emails` that includes emails sent to and from [`zach@g.com`](mailto:zach@g.com):
+
+| id | subject  | from         | to           | timestamp           |
+|----|----------|--------------|--------------|---------------------|
+| 1  | Yosemite | zach@g.com   | thomas@g.com | 2018-01-02 12:45:03 |
+| 2  | Big Sur  | sarah@g.com  | thomas@g.com | 2018-01-02 16:30:01 |
+| 3  | Yosemite | thomas@g.com | zach@g.com   | 2018-01-02 16:35:04 |
+| 4  | Running  | jill@g.com   | zach@g.com   | 2018-01-03 08:12:45 |
+| 5  | Yosemite | zach@g.com   | thomas@g.com | 2018-01-03 14:02:01 |
+
+
+Write a query to get the response time per email (`id`) sent to `zach@g.com` . Do not include `id`s that did not receive a response from [zach@g.com](mailto:zach@g.com). Assume each email thread has a unique subject. Keep in mind a thread may have multiple responses back-and-forth between [zach@g.com](mailto:zach@g.com) and another email address. 
+
+
+
+I cleared the first round but decided not to go with further rounds. In the invite of the second round below things were mentioned.
+2nd round focus area - Data structures, Algorithms, and problem-solving
+3rd round focus area - ETL, SQL, and Data Technologies
