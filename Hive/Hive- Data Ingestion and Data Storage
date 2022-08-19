@@ -1,0 +1,38 @@
+Hive- Data Ingestion and Data Storage
+==============================
+Hive is a data warehouse, designed mainly to process huge data in hdfs. The working of Apache Hive is simple. It translates the input program written in HiveQL (Similar to SQL) into one or more Java a MapReduce and Spark jobs. To know more about Hive architecture and components, refer to my previous post link given in the first comment.
+
+To hold the data, a table should be created. The syntax is given below:
+#Syntax for table creation:
+Create table test.emp
+(sno int,
+Empname string,
+City string)
+ROW FORMAT delimited fields terminated by ‘,’ LINES TERMINATED BY ‘/n’ STORED AS TEXTFILE.
+
+#Data Ingestion:
+We can ingest the data with the hive table in 3 ways
+1. Loading from files --must mention row format, otherwise, it will be loaded only null values
+2. Inserting from sqoop, spark--, no need to specify the row, field, and line format, the hive itself will take care.
+3. Copying the data file into /user/hive/warehouse path after table creation.
+
+We need to add how fields; rows are presented and the file format of the source file when you are loading the data from files by the below line in the time of table creation itself.
+"ROW FORMAT delimited fields terminated by ‘,’ LINES TERMINATED BY ‘/n’ STORED AS TEXTFILE"
+
+While loading the data from the source file, the syntax will vary based on where it is located. If the source file is in the Linux box, mention the keyword ‘local’ before inpath. For example:
+Load data local inpath ‘/home/test/emp_data.txt’ into table emp;
+If the source file is present inside HDFS, no need to mention the keyword ‘local’ before inpath.For example:
+load data inpath ‘/home/test/emp_data.txt’ into table emp
+
+#Hive with MapReduce jobs:
+Hive is running on the MapReduce engine, if needed, you can configure Tej, spark instead of MapReduce. Hive may/may not trigger MapReduce jobs for data processing. Hive does not use/trigger MapReduce job for simple load command whereas insertion, it is used MapReduce job.
+Select, simple load using load command –no map reducer job used
+Select with Aggregation function, Insertion- map reducer job used
+
+#Hive Data Storage:
+Hive is a query engine, not a database as it does not have its own storage. The data files are stored in /user/hive/warehouse by default under the Hadoop ecosystem. To know more about hive tables, you can use below commands:
+
+1. desc <tablename>-gives field name and its datatype
+2. desc extended <tablename>-gives detailed table info like table, dbname, owner name, Fieldschema, data file location, bucket numbers,serde info, field delimitation, table types, table size, etc.
+
+
