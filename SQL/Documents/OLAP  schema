@@ -1,0 +1,20 @@
+Much like an OLTP system(database), an OLAP system(data warehouse) is also required to maintain a schema
+
+➡️ Star Schema
+✅ Each dimension is represented by only one dimension table
+✅ The dimension tables are directly linked with the fact table
+✅ Queries are not that complex because of straightforward joins.
+✅ Simple queries result in the faster query response time
+✅ Most widely used in the industry
+
+➡️ Snowflake Schema
+✅ The dimension table is split into sub-dimension tables
+✅ Some dimensions are normalized to avoid redundancy of data
+✅ Used when a dimension table starts growing at a higher rate
+
+➡️ Galaxy Schema
+✅ It is also called Fact Constellation Schema
+✅ It has more than one fact
+✅ It can be an extension of either star schema or snowflake schema
+✅ The same dimension table can be shared between more than
+one fact table
