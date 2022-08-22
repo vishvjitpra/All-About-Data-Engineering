@@ -1,0 +1,51 @@
+Facebook SQL interview question
+
+Given a table of Facebook posts, for each user who posted at least twice in 2021, write a query to find the average number of days between each user’s posts in the year 2021. Output the user and the average number of days they waited between posts.
+
+Solution
+------------
+3 things I do whenever asked a SQL question in interview -
+1. Read question MULTIPLE times
+2. List down the expected output (this is the main part)
+3. Break down the problem into smaller problems
+
+
+Now, let's solve it!
+
+✳️ STEP 1
+Read question again-> Given users posts table, find AVG of (days) between EACH user's post in 2021. Post at least twice.
+
+✳️ STEP 2
+Comment expected output->
+--user_id | avg(days btw each post)
+
+Example: Let's say, User 1 posted on Aug 1, Aug 5, Aug 8. We need days between each post and then the average of days
+-- userid | post_date | days |
+-- 1 | 2021-08-01 | 0 |
+-- 1 | 2021-08-05 | 4 |
+-- 1 | 2021-08-08 | 3  |
+
+✳️ Step 3
+The sub problem now left to solve is ->
+FIND the days between each post.
+
+◉ To find days, we will use Lag(post_date,1). This gives the previous post date.
+BUT there is an edge case here when the user post for first time there's NO previous_post_date. For this, we can filter using where difference is NOT NULL [SEE cte_2]
+
+-- userid | post_date | lag(post_date,1) |
+-- 1 | 2021-08-01 | NULL |
+-- 1 | 2021-08-05 | 2021-08-01 |
+-- 1 | 2021-08-08 | 2021-08-05 |
+(cte_1 output)
+
+◉ Take the difference (post_date - previous_post_date) where difference is NOT NULL (handling edge case stated above)
+
+-- userid | post_date | lag(post_date,1) | days |
+-- 1 | 2021-08-05 | 2021-08-01 | 4 |
+-- 1 | 2021-08-08 | 2021-08-05 | 3 |
+(cte_2 output)
+
+◉ Finally, take the average of days and GROUP BY each USER_ID that posted at least twice
+-- userid | avg(days)|
+-- 1 | 153 days |
+-- 2 | 103 days |
