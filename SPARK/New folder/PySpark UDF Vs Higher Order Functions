@@ -1,0 +1,10 @@
+PySpark UDF Vs Higher Order Functions:
+Came across a requirement where I got the input as an array data type with corresponding salary of an employee and the required output is to sum all the array elements to find out total salary.
+
+It can be done in both the way.
+Pyspark dataframe/SQL UDF is easy-to-go approach but if you want better performance then we should look into higher order functions which eventually work as an accumulator and lambda method is used to find out the final result.
+
+Higher order function can be seen way faster than UDF one.
+Time taken by Higher order function : 0.35 Sec
+Time taken by Pyspark Datframe UDF : 4.36 Sec
+Have attached the spark UI steps. We can easily figure out the difference there as well.

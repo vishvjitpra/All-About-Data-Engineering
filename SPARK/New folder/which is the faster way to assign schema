@@ -1,0 +1,31 @@
+which is the faster way to assign schema.?
+
+Below are two ways to assign schema,
+
+1) schema1 = ("col1 integer", "col2 Float",..........)
+
+2) schema2 = StructType([
+StructField("col_01", IntegerType()),
+StructField("col_02", DateType()),
+StructField("col_03", IntegerType())
+])
+
+I ran the above two statements, and 1st ran faster. But I have the below two questions.
+
+Question#1: Why the first schema is faster? Is it true in all cases?
+
+Question#2: When should we use 2nd way?
+
+My Answer:
+
+The first one, schema1 = ("col1 integer", "col2 Float",..........) looks like working fast because it defines a string variable. Check the type of schema1 using the below command.
+type(schema1), and you will see str.
+
+The second one takes longer because it defines a schema object using the pyspark.sql.types.StructType
+check the type(schema2), and you will see it.
+
+So the first one takes time at runtime because the string gets converted into the StructType later when you are using it. And the time taken to define the string is extra.
+
+The second one is ready for use because it is already StructType. 
+
+So effectively, string type schema is slightly slower because it takes time to define a string. Then it takes time to parse the string and convert it to StructType at a later stage. So effectively, string type schema is slower. However, the difference could be negligible.

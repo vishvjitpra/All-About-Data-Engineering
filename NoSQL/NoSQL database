@@ -1,0 +1,68 @@
+NoSQL databases:
+
+NoSQL databases differ significantly from SQL databases. For example, they all use a data model with a different structure from relational database management systems' typical row-and-column table architecture (RDBMSs). There are 4 types of NoSQL databases.
+
+1. Key-Value Store
+--------------------
+The key-value store DB system depends on the map-storage data. It helps to speed up query execution as the data is less/not intensive. It does query execution based on primary key values. The best examples are Key/ID columns.
+They are highly scalable and able to scale their nodes when no of concurrent users and traffic grows. It prefers distributed deployment. At peak periods, amazon website uses 10000 different DynamoDB servers to service close to 10 million consumers across several locations.
+#Advantages:
+1. The major advantage is its High Availability, High Scalable, and reliable quality.
+
+2.No exact query language is required. So you can move the DB to any Language.
+
+3. It does not require placeholders for optional data, it will have lower storage requirements and grow virtually linearly with the number of nodes.
+
+#Disadvantages:
+1. Querying a specific value is not possible, you must rely on the person who saved it, trusting that all needed fields are present.
+
+2. Complex queries, such as indexed searches, significantly impact performance.
+
+3. Not optimized for lookup. Lookup requires scanning the whole collection or creating separate index values.
+
+#Example:
+Redis, level Db, Riak, DynamoDB
+
+#Use cases: 
+For storing user session data, maintaining schema-less user profiles, Storing user preferences, Storing shopping cart data,
+2. Document store:
+-----------------------
+It stores data as independent documents with self-contained schemas. The sorting key should be a key that is present in all documents, such as item name or price, to sort the data in this context. Otherwise, if the key isn't included in all papers, the results may be unexpected. In MongoDB, for example, if a value is not represented, it is treated as null and returned at the end of the order. Filtering the results is also possible with the document store database systems.
+
+#Advantages:
+
+1. It can store any data structure.
+2. Ability to perform complicated queries with sorting and filtering in single operations.
+3. As it works as schema-less DB, run faster.
+
+#Disadvantage:
+1. When the document grows, there will be a security concern
+2. Need attention to web app vulnerabilities, which may affect read-write performance.
+
+#Example:
+MongoDB, CouchDB, RavenDB, CouchBase
+
+#Use cases:
+E-commerce platforms, Content management systems, Analytics platforms, and Blogging platforms.
+
+3. Column- Family Store database:
+The column-family databases are designed to keep a huge volume of data comprising little data pieces. The column-family database helps to access a huge amount of data at once since the data is stored under several row keys that may be utilized to collect data with low latency. Due to this, providing real-time data would not be a difficulty.
+The column family database can also help for fast writes because the data model makes data storage a less intensive activity. Google had a similar issue because they had petabytes of data spread across multiple domains and wanted to query it quickly and efficiently.
+#Advantages:
+1. The column-based is a proven and highly effective storage option for event-driven data. For example, a separate column for publishing events or error logs might be created for a given application, with rows identified by unique keys, including event timestamps.
+2. Column family database can handle small data elements for large data sets. So We can store and retrieve relevant data together in our selected domain.
+#Disadvantages:
+When you access the data in different rows, performance will be affected.
+#Use cases
+Content management systems, Blogging platforms, Systems that maintain counters, Services that have expiring usage, and Systems that require heavy write requests (like log aggregators)
+#Examples
+·        Cassandra, HBase, Hyper table, Accumulo, Google’s BigTable
+4. Graph Database
+This database type allows storing data nodes that are participants in the relationships to be constructed to create the connections.Graph databases allow you to define relationships with directional importance, allowing you to store meaningful connections. Furthermore, graph databases will enable you to query the database for different patterns based on your needs. Finally, using various traversal methods, graph databases provide speed and dependability.
+#Advantages:
+The ability to store data in a linked format while retaining the links between distinct entities is one of the main benefits. Relationships can be depicted in a variety of ways. Scalable, high-availability installations are also possible with graph databases.
+#Disadvantage:
+Data Sharding is very difficult in this graph database. Because there is no generalization in the query language for graph databases, sharding data is exceedingly challenging and usually necessitates learning a new query language like CIPHER.
+#Use cases
+·        Fraud detection Graph-based search, Network and IT operations, Social networks, etc
+#Examples: Neo4j,OrientDB,Titan,InfiniteGraph,ApacheGraph
